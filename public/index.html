@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="icon" href="./icons/fac-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Live_WhiteBoard</title>
+</head>
+<body>
+    
+    <div class="option-cont">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img class="pencil" src="./icons/pencil-alt-solid.svg" alt="">
+        <img class="eraser" src="./icons/eraser-solid.svg" alt="">
+        <img class="download" src="./icons/file-download-solid.svg" alt="">
+        <img class="upload" src="./icons/upload-solid.svg" alt="">
+        <img class="redo" src="./icons/redo-solid.svg" alt="">
+        <img class="undo" src="./icons/undo-solid.svg" alt="">
+    </div>
+
+    <div class="pencil-tool-cont scale-tools-p">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencile-width">
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="blue pencil-color"></div>
+            <div class="red pencil-color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont scale-tools-p">
+        <input type="range" min="2" max="10" value="3" class="eraser-width">
+    </div>
+
+<!-- 
+    <div class="sticky-cont">
+        <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            
+        </div>
+    </div> -->
+
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"
+     integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj"
+     crossorigin="anonymous"></script>
+    <script>
+        // let socket = io.connect("http://localhost:3000");
+        let socket = io.connect("https://live-white--board.herokuapp.com");
+    </script>
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>
